@@ -30,7 +30,7 @@ async function displayData() {
                 table_body.innerHTML += `
                 <tr id="raw_data_${index}">
                     <th scope="row">${index + 1}</th>
-                    <td>${item["locations"][index]["location"]}</td>
+                    <td>${item["locations"][index]["Location"]}</td>
                 </tr>
                 `
 
@@ -38,7 +38,7 @@ async function displayData() {
                 item["locations"].forEach(locat => {
                     current.innerHTML += `
                     <tr>
-                        <td>${locat["location"]}</td>
+                        <td>${locat["Location"]}</td>
                     </tr>
                     `
                 })
