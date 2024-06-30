@@ -2,7 +2,9 @@ const table_body = document.getElementById('table-body');
 const table_header = document.getElementById('table-header');
 const main_body = document.getElementById('main-body');
 const display_button = document.getElementById('display-button');
-const url = "http://localhost:8000/schedule";
+// const url = "http://localhost:8000/schedule";
+const url = "https://wedata.onrender.com/schedule";
+
 
 async function fetchData() {
     try {
@@ -71,12 +73,13 @@ function displayData(data) {
 }
 
 window.onload = async () => {
+
+}
+display_button.addEventListener('click', async () => {
     main_body.style.display = 'block';
     const { data } = await fetchData();
     if (data) {
         console.log(data);
         displayData(data);
     }
-}
-// display_button.addEventListener('click', async () => {
-// });
+});
