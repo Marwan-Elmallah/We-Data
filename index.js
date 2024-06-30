@@ -70,11 +70,13 @@ function displayData(data) {
     }
 }
 
-display_button.addEventListener('click', async () => {
+window.onload = async () => {
     main_body.style.display = 'block';
     const { data } = await fetchData();
     if (data) {
         console.log(data);
         displayData(data);
     }
-});
+}
+// display_button.addEventListener('click', async () => {
+// });
